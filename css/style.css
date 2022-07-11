@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 600px;
+  min-height: 400px;  
+}
+
+body {
+  display: grid;
+  height: 100vh;  
+  margin: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;  
+  font-family: 'Space Mono', monospace; 
+  background-image: url("../assets/ocean.jpeg")  
+}
+
+.outer {
+  width: 600px;
+  height: 400px;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  background-color:#012a4a;
+  border-radius: 25px; 
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 5rem
+  
+}
+
+.game {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+  margin-top: 3em;
+}
+
+.reset {
+  display: grid;
+  height:50px;
+  width: 100px;
+  justify-content: center;
+  align-content: center;
+  margin: 55px 0px 50px 50px;
+  background-color: #bc4749;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.reset:hover {
+    background-color: green;
+    
+}
+
+
+.game-container {
+  height: 160px;
+  width: 160px;  
+  display: grid; 
+  
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
+  grid-gap: 10px;
+  background-color: #2196f3;
+  justify-content: center;
+  align-content: center;
+}
+
+.game-container > div {
+  display:grid;
+  background-color:#012a4a;
+  justify-content: center;
+  align-content: center;
+  font-size: 20px;  
+}
+
+.right {
+  justify-content: center;
+  align-content: center;   
+}
+
+.active-player {
+  opacity: 1;
+  text-align: center;
+  font-size: 1rem;
+  color:#bc4749;
+  margin-top: 35px;
+}
+
+.game-winner-banner > h1 {
+  opacity: 0;
+  border-radius: 25px;
+  text-align: center;    
+  margin-top: -10px;
+  margin-left: 85px;
+  margin-right: 2rem;
+  font-size: 1rem;
+  border-style: dotted;  
+  color:yellow;
+  
+}
+
+.score-display {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 30px 30px 30px;
+  grid-template-rows: 30px 30px 30px;  
+  justify-content: center;
+  align-content: center; 
+  color: white; 
+}
+
+@media (max-width: 600px) 
+{
+  body{ background-image: none;
+    background-color:#012a4a;
+  }
+  
+  .outer {width: 90vw;
+    height: 100vh;
+    width: 100wv;    
+    grid-row-start: 1;
+    grid-column-start: 1;  
+     
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 3rem
+      
+  }
+  .right { 
+    margin-top: 30vh;
+    margin-right: 5vw;
+  }
+  .reset {
+    margin-top: 35vh;
+    margin-left: 10vw;
+    color:white;
+  }
+  
+
+}
